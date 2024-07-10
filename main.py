@@ -29,7 +29,7 @@ async def get_price():
     try:
         data = requests.get(osmosis_api)
         response =  data.json()
-        price = round(float(response[0]["price"]),2)
+        price = round(float(response[0]["price"]),3)
         change24 = round (float(response[0]["price_24h_change"]),2)
         change24 = f"24h: {change24}%"
     except: 
